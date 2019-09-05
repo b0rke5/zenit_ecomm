@@ -1,23 +1,24 @@
 <?
 $par = [
 	'TRTYPE' => 1,
-	'BACKREF' => 'http://rostvdpo.ru/test/',
+	'BACKREF' => 'http://c-1.io/back/',
 	'ORDER' => sprintf('%016d', 7),
-	'EMAIL' => 'dev404@ya.ru',
+	'EMAIL' => 'trade@mbrns.org',
 	'COUNTRY' => 'RU',
 	'MERCH_GMT' => '+4',
 	'LANG' => 'ru',
-	'MERCH_NAME' => 'rostvdpo.ru',
-	'MERCH_URL' => 'http://rostvdpo.ru',
+	'MERCHANT' => 'c-1.io',
+	'MERCH_NAME' => 'c-1.io',
+	'MERCH_URL' => 'http://c-1.io',
 	'NONCE' => bin2hex(openssl_random_pseudo_bytes(16)),
 	'TIMESTAMP' => gmdate('YmdHis'),
 	'P_SIGN' => '',
 	'MERCHANT' => '',
-	'TERMINAL' => '88000239',
+	'TERMINAL' => '88000000',
 	'CURRENCY' => 'RUB',
-	'AMOUNT' => '2.00',
-	'DESC' => 'test2',
-	'NOTIFY_URL' => 'http://rostvdpo.ru/test3/',
+	'AMOUNT' => '2000.00',
+	'DESC' => 'C-1.IO',
+	'NOTIFY_URL' => 'http://c-1.io/ipn/',
 	'KEY' => '8D8FBA028BF58AACB9D7B0CE330E684C'
 ];
 
@@ -48,7 +49,7 @@ echo 'p_sign: ' . $mac;
 	<div>NONCE<input type="text" name="NONCE" value="<?= $par['NONCE'] ?>"></div>
 	<div>TIMESTAMP<input type="text" name="TIMESTAMP" value="<?= $par['TIMESTAMP'] ?>"></div>
 	<div>P_SIGN<input type="text" name="P_SIGN" value="<?= $par['P_SIGN'] ?>" id="P_SIGN"></div>
-	<!-- <input type="hidden" name="MERCHANT" value=""> -->
+	<div>MERCHANT<input type="hidden" name="MERCHANT" value="<?= $par['MERCHANT'] ?>" id="MERCHANT"></div>
 	<div>TERMINAL<input type="text" name="TERMINAL" value="<?= $par['TERMINAL'] ?>"></div>
 	<div>CURRENCY<input type="text" name="CURRENCY" value="<?= $par['CURRENCY'] ?>"></div>
 	<div>AMOUNT<input type="text" name="AMOUNT" value="<?= $par['AMOUNT'] ?>"></div>
