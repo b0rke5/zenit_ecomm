@@ -1,7 +1,7 @@
 <?
 $par = [
 	'TRTYPE' => 1,
-	'BACKREF' => 'http://c-1.io/back/',
+	'BACKREF' => 'https://c-1.io/back/',
 	'ORDER' => sprintf('%016d', 7),
 	'EMAIL' => 'trade@mbrns.org',
 	'COUNTRY' => 'RU',
@@ -9,7 +9,7 @@ $par = [
 	'LANG' => 'ru',
 	'MERCHANT' => 'c-1.io',
 	'MERCH_NAME' => 'c-1.io',
-	'MERCH_URL' => 'http://c-1.io',
+	'MERCH_URL' => 'https://c-1.io',
 	'NONCE' => bin2hex(openssl_random_pseudo_bytes(16)),
 	'TIMESTAMP' => gmdate('YmdHis'),
 	'P_SIGN' => '',
@@ -18,7 +18,7 @@ $par = [
 	'CURRENCY' => 'RUB',
 	'AMOUNT' => '2000.00',
 	'DESC' => 'C-1.IO',
-	'NOTIFY_URL' => 'http://c-1.io/ipn/',
+	'NOTIFY_URL' => 'https://api1.c-1.io/ipn/',
 	'KEY' => '8D8FBA028BF58AACB9D7B0CE330E684C'
 ];
 
